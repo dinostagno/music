@@ -38,15 +38,10 @@ const getAccounts = () => {
           headers: headers
         })
         .then((response) => {
-          dispatch({
-            type: FOUND_USER,
-            data: response.data[0]
-          })
+          console.log(JSON.stringify(response.data[0]));
         })
         .catch((error) => {
-          dispatch({
-            type: ERROR_FINDING_USER
-          })
+           console.log('error');
         })
 }
 getAccounts();
