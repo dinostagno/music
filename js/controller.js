@@ -69,3 +69,4 @@ getAccounts();
          console.log('error');
       })  
  }
+ getToken();
