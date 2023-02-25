@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 axios.get("https://world.openfoodfacts.org/category/pastas/1.json")
   .then(response => {
     // access parsed JSON response data using response.data field
