@@ -31,7 +31,7 @@ const getAccounts = () => {
       const headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer 00D2E000000mpVn!ARIAQHLertmUGnNzKfM472gtXin44RKeXnViqObmjmgXputuhlfqDcKrekadxwpIauWQfiqQQJmeu32aLwb.MTe3NHcEf6tb',
-        'Access-Control-Allow-Origin: https://github.com/'
+        'Access-Control-Allow-Origin': 'https://github.com/'
       }
       
       axios.get("https://dinostagno-dev-ed.my.salesforce.com/services/apexrest/AccountsV2/0012E00001ofxRyQAI", {
