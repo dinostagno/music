@@ -1,15 +1,10 @@
-axios.get("https://world.openfoodfacts.org/category/pastas/1.json")
-  .then(response => {
-    // access parsed JSON response data using response.data field
-    data = response.data
-    console.log(data.count)
-    console.log(data.products)
-  })
-  .catch(error => {
-    if (error.response) {
-      //get HTTP error code
-      console.log(error.reponse.status)
-    } else {
-      console.log(error.message)
-    }
-  })
+const getUsers = () => {
+    axios
+      .get("https://reqres.in/api/users")
+      .then((response) => {
+        const users = response.data.data;
+        console.log(`GET users`, users);
+      })
+      .catch((error) => console.error(error));
+  };
+  getUsers();
