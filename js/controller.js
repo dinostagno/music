@@ -59,7 +59,7 @@ getAccounts();
         'Content-Type': 'application/x-www-form-urlencoded',
         'Access-Control-Allow-Origin': 'https://dinostagno.github.io/'
       }
-      axios.post("https://login.salesforce.com/services/oauth2/token", {data: data}, {
+      axios.post("https://dinostagno-dev-ed.my.salesforce.com/services/oauth2/token", {data: data}, {
         headers: headers
       })
       .then((response) => {
