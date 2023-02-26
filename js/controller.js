@@ -47,26 +47,39 @@ const getAccounts = () => {
 getAccounts();
 
 //////////////////////
- const getToken = () => {
-     const data = {
-        "grant_type": "password",
-        "client_id": "3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn",    
-        "client_secret": "5CC14D5C61AB61C49E16DE550455A03AFB12B578F88B32D548BD5585F5707E54",  
-        "username": "dpaolostagno@gmail.com", 
-        "password": "Arch@2023Q5ml4B042lSHP7mJX7A6Tv2V6"  
-      }
-    const headers = {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Access-Control-Allow-Origin': 'https://dinostagno.github.io/'
-      }
-      axios.post("https://login.salesforce.com/services/oauth2/token", {data: data}, {
-        headers: headers
-      })
-      .then((response) => {
-        console.log(JSON.stringify(response.data[0]));
-      })
-      .catch((error) => {
-         console.log('error');
-      })  
- }
- getToken();
+//  const getToken = () => {
+//      const data = {
+//         "grant_type": "password",
+//         "client_id": "3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn",    
+//         "client_secret": "5CC14D5C61AB61C49E16DE550455A03AFB12B578F88B32D548BD5585F5707E54",  
+//         "username": "dpaolostagno@gmail.com", 
+//         "password": "Arch@2023Q5ml4B042lSHP7mJX7A6Tv2V6"  
+//       }
+//     const headers = {
+//         'Content-Type': 'application/x-www-form-urlencoded',
+//         'Access-Control-Allow-Origin': 'https://dinostagno.github.io/'
+//       }
+//       axios.post("https://login.salesforce.com/services/oauth2/token", {data: data}, {
+//         headers: headers
+//       })
+//       .then((response) => {
+//         console.log(JSON.stringify(response.data[0]));
+//       })
+//       .catch((error) => {
+//          console.log('error');
+//       })  
+//  }
+//  getToken();
+
+(async = () => {
+  const neural = new brain.NeuralNetwork();
+  const datos = [
+    {
+      "input": {"¿que eres?": ""},
+      "ouput": {"soy una inteligencia artificial": 1}
+    }
+  ];
+  neural.train(datos);
+  let respuesta = brain.likely({"¿que eres?": ""});
+  alert(respuesta);
+})();
