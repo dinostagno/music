@@ -75,11 +75,11 @@ getAccounts();
   const neural = new brain.NeuralNetwork();
   const datos = [
     {
-      "input": {"¿que eres?": ""},
-      "ouput": {"soy una inteligencia artificial": 1}
+      "input": "¿que eres?",
+      "ouput": "soy una inteligencia artificial"
     }
   ];
   neural.train(datos);
-  let respuesta = brain.likely({"¿que eres?": ""});
+  let respuesta = brain.likely("¿que eres?");
   alert(respuesta);
 })();
